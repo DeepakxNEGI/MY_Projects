@@ -8,11 +8,11 @@
 		<version>3.4.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.App.Chat</groupId>
+	<groupId>com.chat</groupId>
 	<artifactId>chat-app-backend</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>chat-app-backend</name>
-	<description>chat-app-backend</description>
+	<description>chat app backend</description>
 	<url/>
 	<licenses>
 		<license/>
