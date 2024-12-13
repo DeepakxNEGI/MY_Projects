@@ -1,14 +1,20 @@
-# Use OpenJDK 22 base image
+# Use an official OpenJDK runtime as the base image
 FROM openjdk:22-jdk-slim
 
-# Set the working directory
+# Set the working directory in the container
 WORKDIR /app
 
-# Copy the Maven build JAR file into the container
+# Copy the source code into the container
+COPY . .
+
+# Build the application using Maven
+RUN ./mvnw clean package -DskipTests
+
+# Copy the built JAR file to the final image
 COPY target/EmailSenderApp-0.0.1-SNAPSHOT.jar EmailSenderApp.jar
 
-# Expose the port your Spring Boot app runs on (default is 8080)
+# Expose the port your application runs on
 EXPOSE 8080
 
-# Run the Spring Boot application
+# Run the application
 ENTRYPOINT ["java", "-jar", "EmailSenderApp.jar"]
