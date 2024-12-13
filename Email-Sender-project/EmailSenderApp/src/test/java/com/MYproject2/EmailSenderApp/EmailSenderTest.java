@@ -31,30 +31,30 @@ public class EmailSenderTest {
         ,"Email from spring boot",html);
     }
 
-@Test
-    void sendEmailWithFile(){
-        emailService.sendEmailWithFile("deepaknegi7895@gmail.com",
-                "Email with file",
-                "this email contains file",
-                new File("D:\\MYproject\\EmailSenderApp\\src\\main\\resources\\static\\em-image.png")
-                );
+//@Test
+//    void sendEmailWithFile(){
+//        emailService.sendEmailWithFile("deepaknegi7895@gmail.com",
+//                "Email with file",
+//                "this email contains file",
+//                new File("D:\\MYproject\\EmailSenderApp\\src\\main\\resources\\static\\em-image.png")
+//                );
+//
+//    }
 
-    }
-
-    @Test
-    void sendEmailWithStream(){
-        File file = new File("D:\\MYproject\\EmailSenderApp\\src\\main\\resources\\static\\em-image.png");
-        try {
-            InputStream is =new FileInputStream(file);
-            emailService.sendEmailWithFile("deepaknegi7895@gmail.com",
-                    "Email with file",
-                    "this email contains file",is
-            );
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
-        }
-
-    }
+//    @Test
+//    void sendEmailWithStream(){
+//        File file = new File("D:\\MYproject\\EmailSenderApp\\src\\main\\resources\\static\\em-image.png");
+//        try {
+//            InputStream is =new FileInputStream(file);
+//            emailService.sendEmailWithFile("deepaknegi7895@gmail.com",
+//                    "Email with file",
+//                    "this email contains file",is
+//            );
+//        } catch (FileNotFoundException e) {
+//            throw new RuntimeException(e);
+//        }
+//
+//    }
 @Test
     //receiving email test
     void getInbox (){

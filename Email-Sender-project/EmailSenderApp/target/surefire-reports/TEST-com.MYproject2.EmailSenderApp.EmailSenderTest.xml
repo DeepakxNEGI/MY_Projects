@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.MYproject2.EmailSenderApp.EmailSenderTest" time="36.43" tests="3" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="23"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/deepaknegi/Desktop/MY_WORK/MY_Projects/Email-Sender-project/EmailSenderApp/target/test-classes:/Users/deepaknegi/Desktop/MY_WORK/MY_Projects/Email-Sender-project/EmailSenderApp/target/classes:/Users/deepaknegi/.m2/repository/org/springframework/boot/spring-boot-starter-mail/3.3.2/spring-boot-starter-mail-3.3.2.jar:/Users/deepaknegi/.m2/repository/org/springframework/boot/spring-boot-starter/3.3.2/spring-boot-starter-3.3.2.jar:/Users/deepaknegi/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.3.2/spring-boot-starter-logging-3.3.2.jar:/Users/deepaknegi/.m2/repository/ch/qos/logback/logback-classic/1.5.6/logback-classic-1.5.6.jar:/Users/deepaknegi/.m2/repository/ch/qos/logback/logback-core/1.5.6/logback-core-1.5.6.jar:/Users/deepaknegi/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.23.1/log4j-to-slf4j-2.23.1.jar:/Users/deepaknegi/.m2/repository/org/apache/logging/log4j/log4j-api/2.23.1/log4j-api-2.23.1.jar:/Users/deepaknegi/.m2/repository/org/slf4j/jul-to-slf4j/2.0.13/jul-to-slf4j-2.0.13.jar:/Users/deepaknegi/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/Users/deepaknegi/.m2/repository/org/yaml/snakeyaml/2.2/snakeyaml-2.2.jar:/Users/deepaknegi/.m2/repository/org/springframework/spring-context-support/6.1.11/spring-context-support-6.1.11.jar:/Users/deepaknegi/.m2/repository/org/springframework/spring-beans/6.1.11/spring-beans-6.1.11.jar:/Users/deepaknegi/.m2/repository/org/springframework/spring-context/6.1.11/spring-context-6.1.11.jar:/Users/deepaknegi/.m2/repository/org/eclipse/angus/jakarta.mail/2.0.3/jakarta.mail-2.0.3.jar:/Users/deepaknegi/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.3/jakarta.activation-api-2.1.3.jar:/Users/deepaknegi/.m2/repository/org/eclipse/angus/angus-activation/2.0.2/angus-activation-2.0.2.jar:/Users/deepaknegi/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.3.2/spring-boot-starter-web-3.3.2.jar:/Users/deepaknegi/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.3.2/spring-boot-starter-json-3.3.2.jar:/Users/deepaknegi/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.17.2/jackson-databind-2.17.2.jar:/Users/deepaknegi/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.17.2/jackson-annotations-2.17.2.jar:/Users/deepaknegi/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.17.2/jackson-core-2.17.2.jar:/Users/deepaknegi/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.17.2/jackson-datatype-jdk8-2.17.2.jar:/Users/deepaknegi/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.17.2/jackson-datatype-jsr310-2.17.2.jar:/Users/deepaknegi/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.17.2/jackson-module-parameter-names-2.17.2.jar:/Users/deepaknegi/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.3.2/spring-boot-starter-tomcat-3.3.2.jar:/Users/deepaknegi/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.26/tomcat-embed-core-10.1.26.jar:/Users/deepaknegi/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.26/tomcat-embed-el-10.1.26.jar:/Users/deepaknegi/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.26/tomcat-embed-websocket-10.1.26.jar:/Users/deepaknegi/.m2/repository/org/springframework/spring-web/6.1.11/spring-web-6.1.11.jar:/Users/deepaknegi/.m2/repository/io/micrometer/micrometer-observation/1.13.2/micrometer-observation-1.13.2.jar:/Users/deepaknegi/.m2/repository/io/micrometer/micrometer-commons/1.13.2/micrometer-commons-1.13.2.jar:/Users/deepaknegi/.m2/repository/org/springframework/spring-webmvc/6.1.11/spring-webmvc-6.1.11.jar:/Users/deepaknegi/.m2/repository/org/springframework/spring-aop/6.1.11/spring-aop-6.1.11.jar:/Users/deepaknegi/.m2/repository/org/springframework/spring-expression/6.1.11/spring-expression-6.1.11.jar:/Users/deepaknegi/.m2/repository/org/springframework/boot/spring-boot-devtools/3.3.2/spring-boot-devtools-3.3.2.jar:/Users/deepaknegi/.m2/repository/org/springframework/boot/spring-boot/3.3.2/spring-boot-3.3.2.jar:/Users/deepaknegi/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.3.2/spring-boot-autoconfigure-3.3.2.jar:/Users/deepaknegi/.m2/repository/org/projectlombok/lombok/1.18.34/lombok-1.18.34.jar:/Users/deepaknegi/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.3.2/spring-boot-starter-test-3.3.2.jar:/Users/deepaknegi/.m2/repository/org/springframework/boot/spring-boot-test/3.3.2/spring-boot-test-3.3.2.jar:/Users/deepaknegi/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.3.2/spring-boot-test-autoconfigure-3.3.2.jar:/Users/deepaknegi/.m2/repository/com/jayway/jsonpath/json-path/2.9.0/json-path-2.9.0.jar:/Users/deepaknegi/.m2/repository/org/slf4j/slf4j-api/2.0.13/slf4j-api-2.0.13.jar:/Users/deepaknegi/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.2/jakarta.xml.bind-api-4.0.2.jar:/Users/deepaknegi/.m2/repository/net/minidev/json-smart/2.5.1/json-smart-2.5.1.jar:/Users/deepaknegi/.m2/repository/net/minidev/accessors-smart/2.5.1/accessors-smart-2.5.1.jar:/Users/deepaknegi/.m2/repository/org/ow2/asm/asm/9.6/asm-9.6.jar:/Users/deepaknegi/.m2/repository/org/assertj/assertj-core/3.25.3/assertj-core-3.25.3.jar:/Users/deepaknegi/.m2/repository/net/bytebuddy/byte-buddy/1.14.18/byte-buddy-1.14.18.jar:/Users/deepaknegi/.m2/repository/org/awaitility/awaitility/4.2.1/awaitility-4.2.1.jar:/Users/deepaknegi/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/deepaknegi/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.3/junit-jupiter-5.10.3.jar:/Users/deepaknegi/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.3/junit-jupiter-api-5.10.3.jar:/Users/deepaknegi/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/deepaknegi/.m2/repository/org/junit/platform/junit-platform-commons/1.10.3/junit-platform-commons-1.10.3.jar:/Users/deepaknegi/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/deepaknegi/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.3/junit-jupiter-params-5.10.3.jar:/Users/deepaknegi/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.3/junit-jupiter-engine-5.10.3.jar:/Users/deepaknegi/.m2/repository/org/junit/platform/junit-platform-engine/1.10.3/junit-platform-engine-1.10.3.jar:/Users/deepaknegi/.m2/repository/org/mockito/mockito-core/5.11.0/mockito-core-5.11.0.jar:/Users/deepaknegi/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.18/byte-buddy-agent-1.14.18.jar:/Users/deepaknegi/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/Users/deepaknegi/.m2/repository/org/mockito/mockito-junit-jupiter/5.11.0/mockito-junit-jupiter-5.11.0.jar:/Users/deepaknegi/.m2/repository/org/skyscreamer/jsonassert/1.5.3/jsonassert-1.5.3.jar:/Users/deepaknegi/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/deepaknegi/.m2/repository/org/springframework/spring-core/6.1.11/spring-core-6.1.11.jar:/Users/deepaknegi/.m2/repository/org/springframework/spring-jcl/6.1.11/spring-jcl-6.1.11.jar:/Users/deepaknegi/.m2/repository/org/springframework/spring-test/6.1.11/spring-test-6.1.11.jar:/Users/deepaknegi/.m2/repository/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.jar:"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Kolkata"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="23"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-23.jdk/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/deepaknegi/Desktop/MY_WORK/MY_Projects/Email-Sender-project/EmailSenderApp/target/surefire/surefirebooter-20241213123541367_3.jar /Users/deepaknegi/Desktop/MY_WORK/MY_Projects/Email-Sender-project/EmailSenderApp/target/surefire 2024-12-13T12-35-41_295-jvmRun1 surefire-20241213123541367_1tmp surefire_0-20241213123541367_2tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/deepaknegi/Desktop/MY_WORK/MY_Projects/Email-Sender-project/EmailSenderApp/target/test-classes:/Users/deepaknegi/Desktop/MY_WORK/MY_Projects/Email-Sender-project/EmailSenderApp/target/classes:/Users/deepaknegi/.m2/repository/org/springframework/boot/spring-boot-starter-mail/3.3.2/spring-boot-starter-mail-3.3.2.jar:/Users/deepaknegi/.m2/repository/org/springframework/boot/spring-boot-starter/3.3.2/spring-boot-starter-3.3.2.jar:/Users/deepaknegi/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.3.2/spring-boot-starter-logging-3.3.2.jar:/Users/deepaknegi/.m2/repository/ch/qos/logback/logback-classic/1.5.6/logback-classic-1.5.6.jar:/Users/deepaknegi/.m2/repository/ch/qos/logback/logback-core/1.5.6/logback-core-1.5.6.jar:/Users/deepaknegi/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.23.1/log4j-to-slf4j-2.23.1.jar:/Users/deepaknegi/.m2/repository/org/apache/logging/log4j/log4j-api/2.23.1/log4j-api-2.23.1.jar:/Users/deepaknegi/.m2/repository/org/slf4j/jul-to-slf4j/2.0.13/jul-to-slf4j-2.0.13.jar:/Users/deepaknegi/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/Users/deepaknegi/.m2/repository/org/yaml/snakeyaml/2.2/snakeyaml-2.2.jar:/Users/deepaknegi/.m2/repository/org/springframework/spring-context-support/6.1.11/spring-context-support-6.1.11.jar:/Users/deepaknegi/.m2/repository/org/springframework/spring-beans/6.1.11/spring-beans-6.1.11.jar:/Users/deepaknegi/.m2/repository/org/springframework/spring-context/6.1.11/spring-context-6.1.11.jar:/Users/deepaknegi/.m2/repository/org/eclipse/angus/jakarta.mail/2.0.3/jakarta.mail-2.0.3.jar:/Users/deepaknegi/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.3/jakarta.activation-api-2.1.3.jar:/Users/deepaknegi/.m2/repository/org/eclipse/angus/angus-activation/2.0.2/angus-activation-2.0.2.jar:/Users/deepaknegi/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.3.2/spring-boot-starter-web-3.3.2.jar:/Users/deepaknegi/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.3.2/spring-boot-starter-json-3.3.2.jar:/Users/deepaknegi/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.17.2/jackson-databind-2.17.2.jar:/Users/deepaknegi/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.17.2/jackson-annotations-2.17.2.jar:/Users/deepaknegi/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.17.2/jackson-core-2.17.2.jar:/Users/deepaknegi/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.17.2/jackson-datatype-jdk8-2.17.2.jar:/Users/deepaknegi/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.17.2/jackson-datatype-jsr310-2.17.2.jar:/Users/deepaknegi/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.17.2/jackson-module-parameter-names-2.17.2.jar:/Users/deepaknegi/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.3.2/spring-boot-starter-tomcat-3.3.2.jar:/Users/deepaknegi/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.26/tomcat-embed-core-10.1.26.jar:/Users/deepaknegi/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.26/tomcat-embed-el-10.1.26.jar:/Users/deepaknegi/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.26/tomcat-embed-websocket-10.1.26.jar:/Users/deepaknegi/.m2/repository/org/springframework/spring-web/6.1.11/spring-web-6.1.11.jar:/Users/deepaknegi/.m2/repository/io/micrometer/micrometer-observation/1.13.2/micrometer-observation-1.13.2.jar:/Users/deepaknegi/.m2/repository/io/micrometer/micrometer-commons/1.13.2/micrometer-commons-1.13.2.jar:/Users/deepaknegi/.m2/repository/org/springframework/spring-webmvc/6.1.11/spring-webmvc-6.1.11.jar:/Users/deepaknegi/.m2/repository/org/springframework/spring-aop/6.1.11/spring-aop-6.1.11.jar:/Users/deepaknegi/.m2/repository/org/springframework/spring-expression/6.1.11/spring-expression-6.1.11.jar:/Users/deepaknegi/.m2/repository/org/springframework/boot/spring-boot-devtools/3.3.2/spring-boot-devtools-3.3.2.jar:/Users/deepaknegi/.m2/repository/org/springframework/boot/spring-boot/3.3.2/spring-boot-3.3.2.jar:/Users/deepaknegi/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.3.2/spring-boot-autoconfigure-3.3.2.jar:/Users/deepaknegi/.m2/repository/org/projectlombok/lombok/1.18.34/lombok-1.18.34.jar:/Users/deepaknegi/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.3.2/spring-boot-starter-test-3.3.2.jar:/Users/deepaknegi/.m2/repository/org/springframework/boot/spring-boot-test/3.3.2/spring-boot-test-3.3.2.jar:/Users/deepaknegi/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.3.2/spring-boot-test-autoconfigure-3.3.2.jar:/Users/deepaknegi/.m2/repository/com/jayway/jsonpath/json-path/2.9.0/json-path-2.9.0.jar:/Users/deepaknegi/.m2/repository/org/slf4j/slf4j-api/2.0.13/slf4j-api-2.0.13.jar:/Users/deepaknegi/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.2/jakarta.xml.bind-api-4.0.2.jar:/Users/deepaknegi/.m2/repository/net/minidev/json-smart/2.5.1/json-smart-2.5.1.jar:/Users/deepaknegi/.m2/repository/net/minidev/accessors-smart/2.5.1/accessors-smart-2.5.1.jar:/Users/deepaknegi/.m2/repository/org/ow2/asm/asm/9.6/asm-9.6.jar:/Users/deepaknegi/.m2/repository/org/assertj/assertj-core/3.25.3/assertj-core-3.25.3.jar:/Users/deepaknegi/.m2/repository/net/bytebuddy/byte-buddy/1.14.18/byte-buddy-1.14.18.jar:/Users/deepaknegi/.m2/repository/org/awaitility/awaitility/4.2.1/awaitility-4.2.1.jar:/Users/deepaknegi/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/deepaknegi/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.3/junit-jupiter-5.10.3.jar:/Users/deepaknegi/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.3/junit-jupiter-api-5.10.3.jar:/Users/deepaknegi/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/deepaknegi/.m2/repository/org/junit/platform/junit-platform-commons/1.10.3/junit-platform-commons-1.10.3.jar:/Users/deepaknegi/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/deepaknegi/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.3/junit-jupiter-params-5.10.3.jar:/Users/deepaknegi/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.3/junit-jupiter-engine-5.10.3.jar:/Users/deepaknegi/.m2/repository/org/junit/platform/junit-platform-engine/1.10.3/junit-platform-engine-1.10.3.jar:/Users/deepaknegi/.m2/repository/org/mockito/mockito-core/5.11.0/mockito-core-5.11.0.jar:/Users/deepaknegi/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.18/byte-buddy-agent-1.14.18.jar:/Users/deepaknegi/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/Users/deepaknegi/.m2/repository/org/mockito/mockito-junit-jupiter/5.11.0/mockito-junit-jupiter-5.11.0.jar:/Users/deepaknegi/.m2/repository/org/skyscreamer/jsonassert/1.5.3/jsonassert-1.5.3.jar:/Users/deepaknegi/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/deepaknegi/.m2/repository/org/springframework/spring-core/6.1.11/spring-core-6.1.11.jar:/Users/deepaknegi/.m2/repository/org/springframework/spring-jcl/6.1.11/spring-jcl-6.1.11.jar:/Users/deepaknegi/.m2/repository/org/springframework/spring-test/6.1.11/spring-test-6.1.11.jar:/Users/deepaknegi/.m2/repository/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/deepaknegi"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2024-09-17"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk-23.jdk/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/deepaknegi/Desktop/MY_WORK/MY_Projects/Email-Sender-project/EmailSenderApp"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="FILE_LOG_CHARSET" value="UTF-8"/>
+    <property name="java.awt.headless" value="true"/>
+    <property name="apple.awt.application.name" value="ForkedBooter"/>
+    <property name="surefire.real.class.path" value="/Users/deepaknegi/Desktop/MY_WORK/MY_Projects/Email-Sender-project/EmailSenderApp/target/surefire/surefirebooter-20241213123541367_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="23+37-2369"/>
+    <property name="user.name" value="deepaknegi"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="15.1.1"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="/Users/deepaknegi/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="/var/folders/61/bcw9q2w94fq2p8s0mrr99xgc0000gn/T/"/>
+    <property name="idea.version" value="2024.3"/>
+    <property name="java.version" value="23"/>
+    <property name="user.dir" value="/Users/deepaknegi/Desktop/MY_WORK/MY_Projects/Email-Sender-project/EmailSenderApp"/>
+    <property name="os.arch" value="aarch64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="PID" value="43831"/>
+    <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/deepaknegi/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="23+37-2369"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.class.version" value="67.0"/>
+    <property name="LOGGED_APPLICATION_NAME" value="[EmailSenderApp] "/>
+  </properties>
+  <testcase name="emailSendTest" classname="com.MYproject2.EmailSenderApp.EmailSenderTest" time="4.075">
+    <system-out><![CDATA[2024-12-13T12:35:43.482+05:30  INFO 43831 --- [EmailSenderApp] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.MYproject2.EmailSenderApp.EmailSenderTest]: EmailSenderTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-12-13T12:35:43.483+05:30  INFO 43831 --- [EmailSenderApp] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.MYproject2.EmailSenderApp.EmailSenderAppApplication for test class com.MYproject2.EmailSenderApp.EmailSenderTest
+sending email
+2024-12-13T12:35:47.559+05:30  INFO 43831 --- [EmailSenderApp] [           main] c.M.E.Services.EmailServiceImpl          : Email has been set
+]]></system-out>
+  </testcase>
+  <testcase name="sendHtmlInEmail" classname="com.MYproject2.EmailSenderApp.EmailSenderTest" time="3.774">
+    <system-out><![CDATA[2024-12-13T12:35:51.333+05:30  INFO 43831 --- [EmailSenderApp] [           main] c.M.E.Services.EmailServiceImpl          : Email has been set
+]]></system-out>
+  </testcase>
+  <testcase name="getInbox" classname="com.MYproject2.EmailSenderApp.EmailSenderTest" time="28.571">
+    <system-out><![CDATA[Deepak, finish setting up your new Google Account on your Apple iPhone
+Hi Deepak,
+
+Get started with your new Google Account on your Apple iPhone device
+
+Take a minute to set up your device with Google
+
+Get  
+started<https://notifications.google.com/g/p/ANiao5pdmKqexDWbpzAyXbqvFYALCk1eBjeTAf_ychM3PtLwFldfwU2ZVnnVgc39DfrJJS8BW98B46wwJ6OTysosu1ZyBqnGLfUMRgbbKHH4NWWyo_AZxMGgQHXlq63zSITdu6DfoVm4vjbCoiiyTN0AzumI8ZPKcnMw7yQ2yhMNSx4MOXaJQ5x72LP6XB53v4X9deBdI7Z74XEIDjf1OSGOKUoAj8PJ21jhfEAIEcsQO76llO99ba4-wYSsxiaY_cjPC4L-9ooVrZUSJKRYf0CeTXAJxaOXJSLRUcUXS8Pf3LxTzYwGwxpvHSNeKitD0VhYY9WFgdIYnig1UkMKXA9ESx7ewjBOiXyxNRN5bHwAluEg3rtD7N7jCzspRw8mmdts8b8SMhXngKtneyFA5WqUMJilYT96WQOZ3O7iRbKzNlBG02ogrJL->
+
+This email was sent to  
+deepaknegi.project@gmail.com<deepaknegi.project@gmail.com> because you  
+created a Google Account on your Apple iPhone device. If you do not wish to  
+receive emails to help you set up your device with Google when you sign  
+into your account on the device for the first time, please  
+unsubscribe<https://notifications.google.com/g/p/ANiao5rkSoNzxRMnGfAiVhdR6VGzrSxLSSqBnpgbx_NChK4kp6MQ02mTnfZoKZD9wcLCNqAd74pswfE1ReawVwe1B84XZNzK9CRASkYzLrbmB3tQXPf60imW4sXdTjOurTuXUxv0QC60r25WcrPqglde0PsXFPb4tvR0Xqy14kbwVjR-T2JQKZFgTEnE7wFak8WxxxRLbLBHY5d5w57UbXY_5P-ZqjiMZ5rTaKLZ9T0HkJHcqHFjI1W6j6gglez7Ze06KJufhhGZClGKQeP3hbbmVJm6ahpFC1gk7Os68w73Uxi3F-JICQQx-wAtYER0kZV72BGGgmDUlc2Rv8gtRqfEPU8CUS5MdUHJic8-ry8eRVv3sEo5q3dGM9NOysG4Md9YLAMKSngh2be_rBEBibItRi2p5zxIhleA3jfSIU9OVPkV6CMQPndBj_64suAKakKYtAL787qwZOpUuMH4UKkkgwY-fSw32IfNJC_5tNjdDWZO9bxqTvnDhbuGki2EXUOlPGPrs-QWEENtDLcU5pX1xssCO7jTHh0vGoCPJsfH7A0ROnAZRbvbw8-uelVijZ8NuVlCCajmLsXHHTkc18jEnpZdznwS8CAGVjheXJ23rJ3wOD4tGRoMJ9ki1tg>.
+
+© 2024 Google LLC 1600 Amphitheatre Parkway, Mountain View, CA 94043
+
+[]
+Security alert
+[image: Google]
+New passkey added to your account
+
+
+deepaknegi.project@gmail.com
+If you didn’t add a passkey, someone might be using your account. Check and
+secure your account now.
+Check activity
+<https://accounts.google.com/AccountChooser?Email=deepaknegi.project@gmail.com&continue=https://myaccount.google.com/alert/nt/1724245708581?rfn%3D364%26rfnc%3D1%26eid%3D6258770347514833448%26et%3D0>
+You can also see security activity at
+https://myaccount.google.com/notifications
+You received this email to let you know about important changes to your
+Google Account and services.
+© 2024 Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA
+
+[]
+2-Step Verification turned on
+[image: Google]
+2-Step Verification turned on
+
+
+deepaknegi.project@gmail.com
+
+Your Google Account deepaknegi.project@gmail.com is now protected with
+2-Step Verification. When you sign in on a new or untrusted device, you’ll
+need your second factor to verify your identity.
+
+*Don't get locked out!*
+You can add a backup phone or get backup codes to use when you don’t have
+your second factor with you.
+You can review your 2SV settings
+<https://accounts.google.com/AccountChooser?Email=deepaknegi.project@gmail.com&continue=https://myaccount.google.com/signinoptions/two-step-verification?rfn%3D16%26rfnc%3D1%26eid%3D1935935109138144288%26et%3D0>
+to make changes.
+You can also see security activity at
+https://myaccount.google.com/notifications
+You received this email to let you know about important changes to your
+Google Account and services.
+© 2024 Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA
+
+[]
+Security alert
+[image: Google]
+Authenticator app added as sign-in step
+
+
+deepaknegi.project@gmail.com
+If you didn't add the Authenticator app, someone might be using your
+account. Check and secure your account now.
+Check activity
+<https://accounts.google.com/AccountChooser?Email=deepaknegi.project@gmail.com&continue=https://myaccount.google.com/alert/nt/1724245853375?rfn%3D252%26rfnc%3D1%26eid%3D3066245182020814941%26et%3D0>
+You can also see security activity at
+https://myaccount.google.com/notifications
+You received this email to let you know about important changes to your
+Google Account and services.
+© 2024 Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA
+
+[]
+Security alert
+[image: Google]
+App password created to sign in to your account
+
+
+deepaknegi.project@gmail.com
+If you didn't generate this password for Spring-boot-app, someone might be
+using your account. Check and secure your account now.
+Check activity
+<https://accounts.google.com/AccountChooser?Email=deepaknegi.project@gmail.com&continue=https://myaccount.google.com/alert/nt/1724246501461?rfn%3D20%26rfnc%3D1%26eid%3D-861194980834697571%26et%3D0>
+You can also see security activity at
+https://myaccount.google.com/notifications
+You received this email to let you know about important changes to your
+Google Account and services.
+© 2024 Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA
+
+[]
+Welcome to TinyMCE!
+Activate your API key and start using TinyMCE inside your app
+
+Email not displaying correctly? View it in your browser
+https://pi.tiny.cloud/webmail/2202/1414996619/9e92bccffd712de03e7622540a409b6a6981d3e6bab3686566a549a1f113bac1
+
+https://pi.tiny.cloud/e/2202/l-utm-campaign-onboarding-free/dc7cz8/1414996619/h/xHP1nWxCT40UhclF1YH0ymgRuXZ2D9f7pj9mJaiuwDg
+
+Welcome to TinyMCE!
+
+Ready to get started? You're only a few steps away from getting TinyMCE up and running in your website or app:
+
+- Log into the Customer Portal (https://pi.tiny.cloud/e/2202/-campaign-onboarding-free-html/dfy8qt/1414996619/h/xHP1nWxCT40UhclF1YH0ymgRuXZ2D9f7pj9mJaiuwDg)
+- Add the TinyMCE code snippet to your project (this snippet will contain your API key) 
+-Add your website or project URL to the "Approved Domains" section of the Customer Portal
+- Start building! 🎉
+
+Need more in-depth instructions?
+Follow one of our guides or simply forward this email to your developer.
+Cloud-hosted Quick-start → https://pi.tiny.cloud/e/2202/l-utm-campaign-onboarding-free/dc7czk/1414996619/h/xHP1nWxCT40UhclF1YH0ymgRuXZ2D9f7pj9mJaiuwDg
+
+Take advantage of your free trial!
+For the next 14 days, you have access to all of TinyMCE’s advanced features, including PowerPaste, Spell Checker, Merge Tags, Comments and more! Test drive the full potential of TinyMCE and see how it handles your trickiest edge cases.
+
+After the 14-day trial, you'll have the option to upgrade [https://pi.tiny.cloud/e/2202/l-utm-campaign-onboarding-free/dc7czn/1414996619/h/xHP1nWxCT40UhclF1YH0ymgRuXZ2D9f7pj9mJaiuwDg] or stay on our free plan.
+
+Please note that our Free Plan is limited to 1,000 editor loads per month. If you exceed this monthly limit, you’ll automatically be charged $40 USD for every block of 1,000 editor loads you go over. To learn more about our usage-based billing model and how to track your editor loads, visit our FAQ: https://pi.tiny.cloud/e/2202/l-utm-campaign-onboarding-free/dgvqnj/1414996619/h/xHP1nWxCT40UhclF1YH0ymgRuXZ2D9f7pj9mJaiuwDg
+
+https://pi.tiny.cloud/e/2202/jointiny-/dc7czr/1414996619/h/xHP1nWxCT40UhclF1YH0ymgRuXZ2D9f7pj9mJaiuwDg
+https://pi.tiny.cloud/e/2202/jointiny/dc7czv/1414996619/h/xHP1nWxCT40UhclF1YH0ymgRuXZ2D9f7pj9mJaiuwDg
+https://pi.tiny.cloud/e/2202/company-jointiny-/dc7czy/1414996619/h/xHP1nWxCT40UhclF1YH0ymgRuXZ2D9f7pj9mJaiuwDg
+https://pi.tiny.cloud/e/2202/search-q-23tinymce/dc7d12/1414996619/h/xHP1nWxCT40UhclF1YH0ymgRuXZ2D9f7pj9mJaiuwDg
+https://pi.tiny.cloud/e/2202/tinymce/dc7d15/1414996619/h/xHP1nWxCT40UhclF1YH0ymgRuXZ2D9f7pj9mJaiuwDg
+
+This email was sent to deepaknegi.project@gmail.com
+Update your email preferences
+https://pi.tiny.cloud/emailPreference/epc/2202/-pit8C-BaoNrX5kQTR9CZlS9U_MbFjuYSTvruV5Bgks/9e92bccffd712de03e7622540a409b6a6981d3e6bab3686566a549a1f113bac1/1414996619
+ or unsubscribe
+https://pi.tiny.cloud/unsubscribe/u/2202/9e92bccffd712de03e7622540a409b6a6981d3e6bab3686566a549a1f113bac1/1414996619
+
+© 2024 Tiny Technologies | All rights reserved
+www.tiny.cloud | View our privacy policy
+https://pi.tiny.cloud/e/2202/legal-privacy/dc7d18/1414996619/h/xHP1nWxCT40UhclF1YH0ymgRuXZ2D9f7pj9mJaiuwDg
+2100 Geng Road, Palo Alto, CA 94303 USA
+
+
+
+[]
+Try TinyMCE's advanced features before your free trial expires
+Explore all that TinyMCE has to offer
+
+Email not displaying correctly? View it in your browser https://pi.tiny.cloud/webmail/2202/1418181146/9e92bccffd712de03e7622540a409b6a6981d3e6bab3686566a549a1f113bac1
+
+https://pi.tiny.cloud/e/2202/l-utm-campaign-onboarding-free/dc7d55/1418181146/h/skWnSAFqyn6QcgOLKHGCpyjeozACkNEaT5EQ1mOHc9w
+
+7 of 14 days remaining in trial
+Explore TinyMCE's advanced features (https://pi.tiny.cloud/e/2202/l-utm-campaign-onboarding-free/dc7d58/1418181146/h/skWnSAFqyn6QcgOLKHGCpyjeozACkNEaT5EQ1mOHc9w) before it's too late!
+
+Build with some of our most popular features like PowerPaste, Spell Checker, Merge Tags, Comments and more.
+
+Simply add the TinyMCE code snippet to your project to get started
+- Log into the Customer Portal: https://pi.tiny.cloud/e/2202/my-account-integrate--html/dgwvbj/1418181146/h/skWnSAFqyn6QcgOLKHGCpyjeozACkNEaT5EQ1mOHc9w
+- Add the TinyMCE code snippet to your project (this snippet will contain your API key)
+- Add your website or project URL to the "Approved Domains" section of the Customer Portal
+- Start building! 🎉
+
+Need additional help?
+Follow our Cloud-hosted Quick-start guide (https://pi.tiny.cloud/e/2202/l-utm-campaign-onboarding-free/dc7d5c/1418181146/h/skWnSAFqyn6QcgOLKHGCpyjeozACkNEaT5EQ1mOHc9w) or simply forward this email to your developer.
+
+Cloud-hosted Quick-start guide → https://pi.tiny.cloud/e/2202/l-utm-campaign-onboarding-free/dc7d5c/1418181146/h/skWnSAFqyn6QcgOLKHGCpyjeozACkNEaT5EQ1mOHc9w
+
+https://pi.tiny.cloud/e/2202/jointiny-/dc7d5k/1418181146/h/skWnSAFqyn6QcgOLKHGCpyjeozACkNEaT5EQ1mOHc9w
+https://pi.tiny.cloud/e/2202/jointiny/dc7d5n/1418181146/h/skWnSAFqyn6QcgOLKHGCpyjeozACkNEaT5EQ1mOHc9w
+https://pi.tiny.cloud/e/2202/company-jointiny-/dc7d5r/1418181146/h/skWnSAFqyn6QcgOLKHGCpyjeozACkNEaT5EQ1mOHc9w
+https://pi.tiny.cloud/e/2202/search-q-23tinymce/dc7d5v/1418181146/h/skWnSAFqyn6QcgOLKHGCpyjeozACkNEaT5EQ1mOHc9w
+https://pi.tiny.cloud/e/2202/tinymce/dc7d5y/1418181146/h/skWnSAFqyn6QcgOLKHGCpyjeozACkNEaT5EQ1mOHc9w
+
+This email was sent to deepaknegi.project@gmail.com
+Update your email preferences https://pi.tiny.cloud/emailPreference/epc/2202/KRDfbqyrOPKYtYzsR1Xl38msLh-JHOsKvHw2UkPND3g/9e92bccffd712de03e7622540a409b6a6981d3e6bab3686566a549a1f113bac1/1418181146or unsubscribe https://pi.tiny.cloud/unsubscribe/u/2202/9e92bccffd712de03e7622540a409b6a6981d3e6bab3686566a549a1f113bac1/1418181146
+
+© 2024 Tiny Technologies | All rights reserved
+www.tiny.cloud | View our privacy policy
+https://pi.tiny.cloud/e/2202/legal-privacy/dc7d62/1418181146/h/skWnSAFqyn6QcgOLKHGCpyjeozACkNEaT5EQ1mOHc9w
+2100 Geng Road, Palo Alto, CA 94303 USA
+
+
+
+[]
+Need help getting started with TinyMCE?
+
+In case you need help getting started
+
+https://pi.tiny.cloud/e/2202/l-utm-campaign-onboarding-free/dc7d1c/1416261413/h/69X-CqE5v5_V2rocJaCj8ezttcJ-G-ESQGQ_32vb04M
+
+
+Hi Deepak,
+
+Allow me to introduce myself – I'm Michael, TinyMCE's VP of Customer Success.
+
+One of the benefits included in your 14-day FREE trial, is full access to our US-based support team. We're here to help you navigate all things TinyMCE, so please don't hesitate to submit a support request if you're having any challenges.
+
+Submit a support request → https://pi.tiny.cloud/e/2202/78152539-1987605419-1678152539/dc7d1g/1416261413/h/69X-CqE5v5_V2rocJaCj8ezttcJ-G-ESQGQ_32vb04M
+
+Have you added the TinyMCE code snippet?
+- Log into the Customer Portal: https://pi.tiny.cloud/e/2202/my-account-integrate--html/dgwv9t/1416261413/h/69X-CqE5v5_V2rocJaCj8ezttcJ-G-ESQGQ_32vb04M
+- Add the TinyMCE code snippet to your project (this snippet will contain your API key)
+- Add your website or project URL to the "Approved Domains" section of the Customer Portal
+- Start building! 🎉
+
+Get started with TinyMCE in under five minutes!
+https://pi.tiny.cloud/e/2202/watch-v-PofZbdLbASE/dhfqjt/1416261413/h/69X-CqE5v5_V2rocJaCj8ezttcJ-G-ESQGQ_32vb04M
+
+https://pi.tiny.cloud/e/2202/jointiny-/dc7d1k/1416261413/h/69X-CqE5v5_V2rocJaCj8ezttcJ-G-ESQGQ_32vb04M
+https://pi.tiny.cloud/e/2202/jointiny/dc7d1n/1416261413/h/69X-CqE5v5_V2rocJaCj8ezttcJ-G-ESQGQ_32vb04M
+https://pi.tiny.cloud/e/2202/company-jointiny-/dc7d1r/1416261413/h/69X-CqE5v5_V2rocJaCj8ezttcJ-G-ESQGQ_32vb04M
+https://pi.tiny.cloud/e/2202/search-q-23tinymce/dc7d1v/1416261413/h/69X-CqE5v5_V2rocJaCj8ezttcJ-G-ESQGQ_32vb04M
+https://pi.tiny.cloud/e/2202/tinymce/dc7d1y/1416261413/h/69X-CqE5v5_V2rocJaCj8ezttcJ-G-ESQGQ_32vb04M
+
+This email was sent to deepaknegi.project@gmail.com
+Update your email preferences
+https://pi.tiny.cloud/emailPreference/epc/2202/F1tvTRkQ-Qn_GKmGK21LJXVe4PjT7iuACWjr6U4hOCI/9e92bccffd712de03e7622540a409b6a6981d3e6bab3686566a549a1f113bac1/1416261413
+ or unsubscribe
+https://pi.tiny.cloud/unsubscribe/u/2202/9e92bccffd712de03e7622540a409b6a6981d3e6bab3686566a549a1f113bac1/1416261413
+
+2024 Tiny Technologies | All rights reserved
+www.tiny.cloud | View our privacy policy: https://pi.tiny.cloud/e/2202/legal-privacy/dc7d22/1416261413/h/69X-CqE5v5_V2rocJaCj8ezttcJ-G-ESQGQ_32vb04M
+2100 Geng Road, Palo Alto, CA 94303 USA
+
+
+
+[]
+Your free access to TinyMCE's advanced features is ending soon!
+Email not displaying correctly? View it in your browser
+https://pi.tiny.cloud/webmail/2202/1419915368/9e92bccffd712de03e7622540a409b6a6981d3e6bab3686566a549a1f113bac1
+
+https://pi.tiny.cloud/e/2202/l-utm-campaign-onboarding-free/dc7d3y/1419915368/h/mY-NEYuRKsYUXJ5S3ggCRGU6fhD9lPTIEl0OqYNQL2c
+
+3 of 14 days remaining
+Time is running out to explore all of TinyMCE’s advanced features!: https://pi.tiny.cloud/e/2202/l-utm-campaign-onboarding-free/dc7d42/1419915368/h/mY-NEYuRKsYUXJ5S3ggCRGU6fhD9lPTIEl0OqYNQL2c
+
+Having trouble getting started?
+Follow our Cloud-hosted Quick-start guide (https://pi.tiny.cloud/e/2202/l-utm-campaign-onboarding-free/dc7d48/1419915368/h/mY-NEYuRKsYUXJ5S3ggCRGU6fhD9lPTIEl0OqYNQL2c) or submit a support request (https://pi.tiny.cloud/e/2202/hc-en-us-/dh87vp/1419915368/h/mY-NEYuRKsYUXJ5S3ggCRGU6fhD9lPTIEl0OqYNQL2c) if you continue to have any challenges
+
+What happens after your 14-day trial ends?
+At the end of your 14-day trial, you’ll lose access to all advanced features unless you upgrade to an Essential or Professional plan: https://pi.tiny.cloud/e/2202/l-utm-campaign-onboarding-free/dc7d4c/1419915368/h/mY-NEYuRKsYUXJ5S3ggCRGU6fhD9lPTIEl0OqYNQL2c
+
+We’ll also begin tracking your editor loads. If you exceed your allocated plan limit of 1,000 editor loads per month, you’ll automatically be charged $40 USD for every block of 1,000 additional editor loads. To learn more about this usage-based billing model and how to track your editor loads, visit our FAQ: https://pi.tiny.cloud/e/2202/l-utm-campaign-onboarding-free/dh87vs/1419915368/h/mY-NEYuRKsYUXJ5S3ggCRGU6fhD9lPTIEl0OqYNQL2c
+
+Want to continue using the commercial version of TinyMCE, but need to self-host?
+Get in touch with our sales team (https://pi.tiny.cloud/e/2202/l-utm-campaign-onboarding-free/dc7d4g/1419915368/h/mY-NEYuRKsYUXJ5S3ggCRGU6fhD9lPTIEl0OqYNQL2c), who can help set you up with a proof-of-concept and discuss the costs involved in self-hosting the advanced TinyMCE features.
+
+https://pi.tiny.cloud/e/2202/jointiny-/dc7d4k/1419915368/h/mY-NEYuRKsYUXJ5S3ggCRGU6fhD9lPTIEl0OqYNQL2c
+https://pi.tiny.cloud/e/2202/jointiny/dc7d4n/1419915368/h/mY-NEYuRKsYUXJ5S3ggCRGU6fhD9lPTIEl0OqYNQL2c
+https://pi.tiny.cloud/e/2202/company-jointiny-/dc7d4r/1419915368/h/mY-NEYuRKsYUXJ5S3ggCRGU6fhD9lPTIEl0OqYNQL2c
+https://pi.tiny.cloud/e/2202/search-q-23tinymce/dc7d4v/1419915368/h/mY-NEYuRKsYUXJ5S3ggCRGU6fhD9lPTIEl0OqYNQL2c
+https://pi.tiny.cloud/e/2202/tinymce/dc7d4y/1419915368/h/mY-NEYuRKsYUXJ5S3ggCRGU6fhD9lPTIEl0OqYNQL2c
+
+This email was sent to deepaknegi.project@gmail.com
+Update your email preferences
+https://pi.tiny.cloud/emailPreference/epc/2202/TpAJBHseIVBBN5a7W_X95F0kSkX_kbbYY0P68iNaJF0/9e92bccffd712de03e7622540a409b6a6981d3e6bab3686566a549a1f113bac1/1419915368
+ or unsubscribe
+https://pi.tiny.cloud/unsubscribe/u/2202/9e92bccffd712de03e7622540a409b6a6981d3e6bab3686566a549a1f113bac1/1419915368
+
+© 2024 Tiny Technologies | All rights reserved
+www.tiny.cloud | View our privacy policy
+https://pi.tiny.cloud/e/2202/legal-privacy/dc7d52/1419915368/h/mY-NEYuRKsYUXJ5S3ggCRGU6fhD9lPTIEl0OqYNQL2c
+2100 Geng Road, Palo Alto, CA 94303 USA
+
+									 
+
+                                                           
+
+
+
+[]
+Your 14-day trial of TinyMCE has ended
+
+Email not displaying correctly? View it in your browser
+
+https://pi.tiny.cloud/webmail/2202/1421460347/9e92bccffd712de03e7622540a409b6a6981d3e6bab3686566a549a1f113bac1​​​​​​​
+
+https://pi.tiny.cloud/e/2202/l-utm-campaign-onboarding-free/dc7d65/1421460347/h/FrV8Q6QLc7OArVYLzT2mUMD2-DxWwNRLkCEQFzyMiqg
+
+Your FREE trial of TinyMCE advanced features has ended. What's next?
+
+Thank you for test-driving TinyMCE's advanced features!
+
+If you don't want to lose access to the advanced features included in your trial, simply upgrade to our Essential or Professional plan. These plans include additional monthly editor loads, ongoing access to our professional support team, and much more.
+
+How do I upgrade my plan?
+- Log into the Customer Portal: https://pi.tiny.cloud/e/2202/my-account-integrate--html/dh8crp/1421460347/h/FrV8Q6QLc7OArVYLzT2mUMD2-DxWwNRLkCEQFzyMiqg
+- Navigate to the “Upgrade your Plan”section
+- Choose “Change Plan”
+- Select your new plan and check out
+
+Want to continue using TinyMCE's Core Editing features?
+You're all set! Just remember that our free plan is limited to 1,000 editor loads per month. If you feel you’ll regularly exceed that limit, we encourage you to upgrade to an Essential or Professional Plan.
+
+BTW, if you start getting error messages about advanced features not working, read the below ‘How-to’ guide about removing the notifications: https://pi.tiny.cloud/e/2202/l-utm-campaign-onboarding-free/dc7d6g/1421460347/h/FrV8Q6QLc7OArVYLzT2mUMD2-DxWwNRLkCEQFzyMiqg
+
+https://pi.tiny.cloud/e/2202/jointiny-/dc7d6k/1421460347/h/FrV8Q6QLc7OArVYLzT2mUMD2-DxWwNRLkCEQFzyMiqg
+https://pi.tiny.cloud/e/2202/jointiny/dc7d6n/1421460347/h/FrV8Q6QLc7OArVYLzT2mUMD2-DxWwNRLkCEQFzyMiqg
+https://pi.tiny.cloud/e/2202/company-jointiny-/dc7d6r/1421460347/h/FrV8Q6QLc7OArVYLzT2mUMD2-DxWwNRLkCEQFzyMiqg
+https://pi.tiny.cloud/e/2202/search-q-23tinymce/dc7d6v/1421460347/h/FrV8Q6QLc7OArVYLzT2mUMD2-DxWwNRLkCEQFzyMiqg
+https://pi.tiny.cloud/e/2202/tinymce/dc7d6y/1421460347/h/FrV8Q6QLc7OArVYLzT2mUMD2-DxWwNRLkCEQFzyMiqg
+
+This email was sent to deepaknegi.project@gmail.com
+Update your email preferences
+https://pi.tiny.cloud/emailPreference/epc/2202/TE-MGgpzWVXWF6kNdALGyVrU4-_Yly7IMWGwv2c0PiM/9e92bccffd712de03e7622540a409b6a6981d3e6bab3686566a549a1f113bac1/1421460347 or unsubscribe https://pi.tiny.cloud/unsubscribe/u/2202/9e92bccffd712de03e7622540a409b6a6981d3e6bab3686566a549a1f113bac1/1421460347
+
+2024 Tiny Technologies | All rights reserved
+www.tiny.cloud | View our privacy policy
+https://pi.tiny.cloud/e/2202/legal-privacy/dc7d72/1421460347/h/FrV8Q6QLc7OArVYLzT2mUMD2-DxWwNRLkCEQFzyMiqg
+2100 Geng Road, Palo Alto, CA 94303 USA
+
+
+
+[]
+Security alert
+[image: Google]
+rclone was granted access to your Google Account
+
+
+deepaknegi.project@gmail.com
+
+If you did not grant access, you should check this activity and secure your
+account.
+Check activity
+<https://accounts.google.com/AccountChooser?Email=deepaknegi.project@gmail.com&continue=https://myaccount.google.com/alert/nt/1728646389000?rfn%3D127%26rfnc%3D1%26eid%3D1253056400611744466%26et%3D0>
+You can also see security activity at
+https://myaccount.google.com/notifications
+You received this email to let you know about important changes to your
+Google Account and services.
+© 2024 Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA
+
+[]
+Security alert
+[image: Google]
+rclone was granted access to your Google Account
+
+
+deepaknegi.project@gmail.com
+
+If you did not grant access, you should check this activity and secure your
+account.
+Check activity
+<https://accounts.google.com/AccountChooser?Email=deepaknegi.project@gmail.com&continue=https://myaccount.google.com/alert/nt/1728799622000?rfn%3D127%26rfnc%3D1%26eid%3D-4265471384175984540%26et%3D0>
+You can also see security activity at
+https://myaccount.google.com/notifications
+You received this email to let you know about important changes to your
+Google Account and services.
+© 2024 Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA
+
+[]
+Security alert
+[image: Google]
+rclone was granted access to your Google Account
+
+
+deepaknegi.project@gmail.com
+
+If you did not grant access, you should check this activity and secure your
+account.
+Check activity
+<https://accounts.google.com/AccountChooser?Email=deepaknegi.project@gmail.com&continue=https://myaccount.google.com/alert/nt/1728913418000?rfn%3D127%26rfnc%3D1%26eid%3D-2908184117572260932%26et%3D0>
+You can also see security activity at
+https://myaccount.google.com/notifications
+You received this email to let you know about important changes to your
+Google Account and services.
+© 2024 Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA
+
+[]
+Security alert
+[image: Google]
+rclone was granted access to your Google Account
+
+
+deepaknegi.project@gmail.com
+
+If you did not grant access, you should check this activity and secure your
+account.
+Check activity
+<https://accounts.google.com/AccountChooser?Email=deepaknegi.project@gmail.com&continue=https://myaccount.google.com/alert/nt/1728996540000?rfn%3D127%26rfnc%3D1%26eid%3D-2845522766335585311%26et%3D0>
+You can also see security activity at
+https://myaccount.google.com/notifications
+You received this email to let you know about important changes to your
+Google Account and services.
+© 2024 Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA
+
+[]
+How was your experience with TinyMCE?
+
+Now that your trial is over, we'd love to hear about your experience
+
+Is this email not displaying correctly? View it in your browser https://pi.tiny.cloud/webmail/2202/1422083063/9e92bccffd712de03e7622540a409b6a6981d3e6bab3686566a549a1f113bac1
+
+https://pi.tiny.cloud/e/2202/l-utm-campaign-onboarding-free/dc7d92/1422083063/h/qx3wPOoi97NY_k2b4XVTk802oPzWQE4FpZTN4ZolIak
+
+On a scale of 1 to 10, how likely are you to recommend TinyMCE to a friend or colleague?
+
+0 -&gt; Not at all likely
+10 -&gt; Extremely likely
+
+0 https://pi.tiny.cloud/e/2202/s-01F52SR1KX72PEA7RXD0MFEZZP-0/dc7d95/1422083063/h/qx3wPOoi97NY_k2b4XVTk802oPzWQE4FpZTN4ZolIak
+1 https://pi.tiny.cloud/e/2202/s-01F52SR1KX72PEA7RXD0MFEZZP-1/dc7d98/1422083063/h/qx3wPOoi97NY_k2b4XVTk802oPzWQE4FpZTN4ZolIak
+2 https://pi.tiny.cloud/e/2202/s-01F52SR1KX72PEA7RXD0MFEZZP-2/dc7d9c/1422083063/h/qx3wPOoi97NY_k2b4XVTk802oPzWQE4FpZTN4ZolIak
+3 https://pi.tiny.cloud/e/2202/s-01F52SR1KX72PEA7RXD0MFEZZP-3/dc7d9g/1422083063/h/qx3wPOoi97NY_k2b4XVTk802oPzWQE4FpZTN4ZolIak
+4 https://pi.tiny.cloud/e/2202/s-01F52SR1KX72PEA7RXD0MFEZZP-4/dc7d9k/1422083063/h/qx3wPOoi97NY_k2b4XVTk802oPzWQE4FpZTN4ZolIak
+5 https://pi.tiny.cloud/e/2202/s-01F52SR1KX72PEA7RXD0MFEZZP-5/dc7d9n/1422083063/h/qx3wPOoi97NY_k2b4XVTk802oPzWQE4FpZTN4ZolIak
+6 https://pi.tiny.cloud/e/2202/s-01F52SR1KX72PEA7RXD0MFEZZP-6/dc7d9r/1422083063/h/qx3wPOoi97NY_k2b4XVTk802oPzWQE4FpZTN4ZolIak
+7 https://pi.tiny.cloud/e/2202/s-01F52SR1KX72PEA7RXD0MFEZZP-7/dc7d9v/1422083063/h/qx3wPOoi97NY_k2b4XVTk802oPzWQE4FpZTN4ZolIak
+8 https://pi.tiny.cloud/e/2202/s-01F52SR1KX72PEA7RXD0MFEZZP-8/dc7d9y/1422083063/h/qx3wPOoi97NY_k2b4XVTk802oPzWQE4FpZTN4ZolIak
+9 https://pi.tiny.cloud/e/2202/s-01F52SR1KX72PEA7RXD0MFEZZP-9/dc7db2/1422083063/h/qx3wPOoi97NY_k2b4XVTk802oPzWQE4FpZTN4ZolIak
+10 https://pi.tiny.cloud/e/2202/-01F52SR1KX72PEA7RXD0MFEZZP-10/dc7db5/1422083063/h/qx3wPOoi97NY_k2b4XVTk802oPzWQE4FpZTN4ZolIak
+
+https://pi.tiny.cloud/e/2202/jointiny-/dc7db8/1422083063/h/qx3wPOoi97NY_k2b4XVTk802oPzWQE4FpZTN4ZolIak
+https://pi.tiny.cloud/e/2202/jointiny/dc7dbc/1422083063/h/qx3wPOoi97NY_k2b4XVTk802oPzWQE4FpZTN4ZolIak
+https://pi.tiny.cloud/e/2202/company-jointiny-/dc7dbg/1422083063/h/qx3wPOoi97NY_k2b4XVTk802oPzWQE4FpZTN4ZolIak
+https://pi.tiny.cloud/e/2202/search-q-23tinymce/dc7dbk/1422083063/h/qx3wPOoi97NY_k2b4XVTk802oPzWQE4FpZTN4ZolIak
+https://pi.tiny.cloud/e/2202/tinymce/dc7dbn/1422083063/h/qx3wPOoi97NY_k2b4XVTk802oPzWQE4FpZTN4ZolIak
+
+This email was sent to deepaknegi.project@gmail.com
+Update your email preferences https://pi.tiny.cloud/emailPreference/epc/2202/4BImXPDy2sZv23ixTbzjJDdFWKmGQZB_aGZmUjbLEj0/9e92bccffd712de03e7622540a409b6a6981d3e6bab3686566a549a1f113bac1/1422083063 or unsubscribe https://pi.tiny.cloud/unsubscribe/u/2202/9e92bccffd712de03e7622540a409b6a6981d3e6bab3686566a549a1f113bac1/1422083063
+
+© 2024 Tiny Technologies | All rights reserved
+www.tiny.cloud | View our privacy policy
+https://pi.tiny.cloud/e/2202/legal-privacy/dc7dbr/1422083063/h/qx3wPOoi97NY_k2b4XVTk802oPzWQE4FpZTN4ZolIak
+2100 Geng Road, Palo Alto, CA 94303 USA
+
+
+[]
+Annual reminder about YouTube’s Terms of Service, Community Guidelines and Privacy Policy
+
+
+
+
+
+-----
+
+
+
+This email is an annual reminder that your use of YouTube is subject to the  
+<https://notifications.google.com/g/p/ANiao5qqOhDJMRd-VdFAZrTNvRf_pTsJvnwHY11TYswyLUH7gRc9-QjJsS-yWMgX-TSCNHOteIdKZloXtzJsBH1wgkPqIPmpFQEtRXGkPVjGueB9KxuQ-eSMsP4Fe_eKtXkTJZFdmOEIIm0civx1Kui0924489NeTbyLGbX-7hGj1RN8N7Ukf1IpoYlpNdpm8lHz9Y9e-SIsIVZDsuJR-pBJ_1SThMEk9Q1ZcQAZANgGToLRSBTtacXOkCzycq4V9tjy">Terms  
+of Service,  
+<https://notifications.google.com/g/p/ANiao5owk3kCLmVhPEm2t6pgPd3RMg1g7qyQmPMBqj_Vq1D2o01YtIzHOnHWmlMHwcIrtIZATVnSTq19yEYC1znAz12EJ4cYTVoSGFvXVzFTHJrMhIfCDNoxr1dEI9esecqZKEF8gPNZFEds-RYhsdougEejXxH8MmeasxJC6AEK1PJc9s7wBayJAf-Pudxl-eDfTbXGb5TdX_Ep4LM3tNCR61Q0BEXUzlRixG4vQ_rIi0VHcycwrQMoIINt1tFQfhh64tJz-Q-YTS4FILjv8CHP7szehZSAxZslXSGVS9tT8GxlGd-RzzvIftd_SA">Community  
+Guidelines and Google’s  
+<https://notifications.google.com/g/p/ANiao5rEWjws3WnLFt_m-B6wdD4DdOyR_VIT3sYxCoUOCDjHeqYd15TsBQ6c_N6sQenX0AMFg3Ux_rxMdeLKMa725z8dT4ItQFdOaquN_T18IJTyhL-EsZkeLcbJtyKs3r2cJnw3c98S-PtVyfkbQPi2KvGe_LFOdMOX3DFLBTKDMMeFIHS0IS_lYFpiAwf7XXbQHdYe25z3Yj24eoOzzjlH-_HQRaTkQcqcfPvkEyVxLTdSr-xrPoYYOU0rFkzdUJr0pBihm5OapIuG44E">Privacy  
+Policy. While our Terms of Service remain a legal document, we’ve done our  
+best to make them easy to understand.
+
+
+The  
+<https://notifications.google.com/g/p/ANiao5qJ5n6zeN2Ftm2-xkY1wdzImV0T9Y6WdE2dwa0w9qJO1-xjVCdrebP45x1_nm6JDN5uMkAtNtzFkUbp4fXrfxYen2ueLwib1NuWgEATL5_t88zrD-fr8UsYLUllRVuNyhEBG_U_-kqMAFjegkrt7xSy6v4rkrc-lKatqcRbuQfzIj3pGQdy4VIXtFT_1flWIvzElKHTgdTa2ISCtLL3cfAc7CzLV7BL3kAR6gCYjNyK5BEWhWe53nJMljFboRuF4C5HY_KT_E-Wu-pdRtI-QSq0VcJ9BpKZq-wZVvi9Dii8g2b_gINuLdo">Community  
+Guidelines which are a part of our  
+<https://notifications.google.com/g/p/ANiao5q-6OtkErakIVY8NRT974hep_a5ba0z7WaIV_pFYYpwG1EkjG_g_SRcwesdoudIIG4j3GJ3H_NmOlv1dPtJfFMLgoWCiQr9frHBXrq43chvaTXf0hYNdI4-EtMG6PMW5P1xFjecTf1eps7avJj9DCuQvd8Omo5dJEggP7FnXVHZHXF4yO3a0k0eFX-jarj91VFgZ_tdBLfpH0aV72HBwwA4GN4blcH_CSyId6mUJpJaDkXTRh8NKHyMaLihqg">Terms  
+of Service, aim to make YouTube a safer community while still giving  
+creators the freedom to share a broad range of experiences and  
+perspectives. The Community Guidelines outline what type of content isn't  
+allowed on YouTube. These policies apply to all types of content on our  
+platform, including videos, comments, links and thumbnails. In addition to  
+Community Guidelines, creators who want to monetise content on YouTube must  
+comply with  
+<https://notifications.google.com/g/p/ANiao5qw4n5EmOkyFFHOElt7rjrNL-1OxrMy5-Tl_3-mcbPKEGUVKSx4dYWvITQToTtgOwYuvxSJ01G8P0KAD2txSZJnoa_IHmkan2oPYiUT9RNJVHgC38MIDTxDCY1Sjm-l-bbDk30iJMH83dJrvYa6BWWy0baSrW3NGYhDEvKv8ycf5GMyIbmajD9KmUfSjYcVlqPC9quzUcAmX5uQK-eKvSd42KQInc1u3IzLTFa1rC5WA_fTInQ0B3ryAPdwKMhgdJLmQl9V2LtPFFVc7fwhiRgYz5R4pKoMzRo1dULqzrPjny5JDZk371oCag">Monetization  
+Policies.
+
+
+
+
+By way of due diligence as an intermediary we also take this opportunity to  
+remind our users to comply with the Indian Information Technology  
+(Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021 (as  
+amended) (“Intermediary Rules”).
+
+
+
+YouTube is also again informing you under Rule 5 of the Intermediary Rules  
+that if you are a publisher of news or current affairs content, you are  
+required to furnish the details of your accounts on YouTube to the Ministry  
+of Information and Broadcasting (“MIB”) in compliance with Rules 18 of the  
+Intermediary Rules and public notice dated 26 May 2021 published by MIB.
+
+
+
+Please adhere to these terms to maintain continued use of and access to  
+YouTube. Violation of these terms and guidelines may result in warnings or  
+further action including loss of access or termination of all or part of  
+your account.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Thank you for being part of our global community! YouTube
+
+-----
+
+Help Center
+<https://notifications.google.com/g/p/ANiao5q2atNogntRSCzg4XkgWd6iVZDUEGkq9jLTMfcxPgEPbtEcdf5_hyU72hpP80UmoElz3NnuUbKnX8h-Rcjt4V_NSQDJ1OxMyDXAznf0-Qo2cU3wwmBGaxupVHLMelrKOuKWIlBM4degStyMKHyzyTb9OKkuHHxasocNk0EA7epwGih9ZxsYZlJWN0lIywZnkraWq57FvnrJAZHLUQIOrp4zK6cksWl166zt_NoXx5iPjA>
+Email options
+<https://notifications.google.com/g/p/ANiao5ohot2fBf6VMi49k-e67MuPtldJi6tZiOrWYLcEApWu9PiTC5Q-_lo30BMTk5IdqZgkxvAAkA2HTZ5nxsnCKnd3CdfPYow_I9dq6enTLsy9_s-ziDF9xEeComuUyNeUiBe_jy9_uhaFfvP49LdCD6Nz1GOxH5Afq1tGlae70ZTEJDUdm7kO_-KWZ7c2LpRK6bY7OlCzEVpjBWgrE3IqSAIC65R2YHiElm7GYrWzsJVuOWs-A-LXVfEHsGYm>
+
+You have received this mandatory email service announcement in connection  
+with your use of YouTube.
+
+
+
+<https://notifications.google.com/g/p/ANiao5o4e-_PigFFYCVA68pgrFpbFC2dogPSPPkIYxGN3DmjUtdO1AlvQx8iBN04nTpNJXYBpN6XjSF5wBQqnhuzt5Vr4PDmigw7ZYcCCqtAo1oGpWuB2e4bFhasU46EhBgISVIRt_lc0_ooRjGnel3Va3Lu-X8FXbiXH4C76aAuadQH-0YH5IpWoDYkNhJapVJqUhPspOPlvjXsMTxlwHFzsW2K46PI>
+
+(c) 2024 Google LLC d/b/a YouTube 901 Cherry Ave San Bruno, CA 94066
+
+
+[]
+Your Google Account was recovered successfully
+[image: Google]
+Account recovered successfully
+
+
+deepaknegi.project@gmail.com
+Welcome back to your accountIf you suspect you were locked out of your
+account because of changes made by someone else, you should review &
+protect your account.
+<https://accounts.google.com/AccountChooser?Email=deepaknegi.project@gmail.com&continue=https://myaccount.google.com/secure-account?utm_source%3Demail%26utm_medium%3Demail%26utm_campaign%3Dph%26src%3D14%26aneid%3D-1025119885248948287>
+You received this email to let you know about important changes to your
+Google Account and services.
+© 2024 Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA
+
+[]
+Security alert
+[image: Google]
+Your password was changed
+
+
+deepaknegi.project@gmail.com
+The password for your Google account deepaknegi.project@gmail.com was
+changed. If you didn't change it, you should recover your account
+<https://accounts.google.com/RecoverAccount?fpOnly=1&source=ancp&Email=deepaknegi.project@gmail.com&et=0>
+.
+You can also see security activity at
+https://myaccount.google.com/notifications
+You received this email to let you know about important changes to your
+Google Account and services.
+© 2024 Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA
+
+[]
+Security alert
+[image: Google]
+A new sign-in on Mac
+
+
+deepaknegi.project@gmail.com
+We noticed a new sign-in to your Google Account on a Mac device. If this
+was you, you don’t need to do anything. If not, we’ll help you secure your
+account.
+Check activity
+<https://accounts.google.com/AccountChooser?Email=deepaknegi.project@gmail.com&continue=https://myaccount.google.com/alert/nt/1732350034000?rfn%3D325%26rfnc%3D1%26eid%3D8397570101622742137%26et%3D0>
+You can also see security activity at
+https://myaccount.google.com/notifications
+You received this email to let you know about important changes to your
+Google Account and services.
+© 2024 Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA
+
+[]
+Security alert
+[image: Google]
+Recovery email was changed for
+
+
+deepaknegi.project@gmail.com
+The recovery email for your account was changed. If you didn't change it,
+you should check what happened.
+Check activity
+<https://accounts.google.com/AccountChooser?Email=deepaknegi.project@gmail.com&continue=https://myaccount.google.com/alert/nt/1732355759087?rfn%3D2%26rfnc%3D1%26eid%3D-7924793034889084821%26et%3D0>
+You can also see security activity at
+https://myaccount.google.com/notifications
+You received this email to let you know about important changes to your
+Google Account and services.
+© 2024 Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA
+
+[]
+Security alert
+[image: Google]
+App password created to sign in to your account
+
+
+deepaknegi.project@gmail.com
+If you didn't generate this password for spring-boot-app, someone might be
+using your account. Check and secure your account now.
+Check activity
+<https://accounts.google.com/AccountChooser?Email=deepaknegi.project@gmail.com&continue=https://myaccount.google.com/alert/nt/1732356099456?rfn%3D20%26rfnc%3D1%26eid%3D-3911374153617006545%26et%3D0>
+You can also see security activity at
+https://myaccount.google.com/notifications
+You received this email to let you know about important changes to your
+Google Account and services.
+© 2024 Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA
+
+[]
+]]></system-out>
+  </testcase>
+</testsuite>
