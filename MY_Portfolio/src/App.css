@@ -431,7 +431,7 @@ form textarea{
 
 @media (min-aspect-ratio: 16/10){
   .back-video{
-      width: 110%;
+      width: 100%;
       height: auto;
   }
 }
