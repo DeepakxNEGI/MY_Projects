@@ -35,6 +35,7 @@ public class SalonServiceImpl implements SalonService {
     @Override
     public Salon updateSalon(SalonDTO salon, UserDTO user, Long salonId) throws Exception {
         Salon existingSalon = salonRepository.findById(salonId).orElse(null);
+
         if (existingSalon != null && existingSalon.getOwnerId().equals(user.getId())) {
             existingSalon.setName(salon.getName());
             existingSalon.setImages(salon.getImages());
@@ -57,13 +58,13 @@ public class SalonServiceImpl implements SalonService {
     }
 
     @Override
-    public Salon getSalonById(Long salonId) throws Exception {
-        Salon salon = salonRepository.findById(salonId).orElse(null);
-        if (salon != null) {
-            throw new Exception("salon not exit");
-        }
-        return salon;
+public Salon getSalonById(Long salonId) throws Exception {
+    Salon salon = salonRepository.findById(salonId).orElse(null);
+    if (salon == null) {  // Correct condition
+        throw new Exception("Salon does not exist");
     }
+    return salon;
+}
 
     @Override
     public Salon getSalonByOwnerId(Long ownerId) {

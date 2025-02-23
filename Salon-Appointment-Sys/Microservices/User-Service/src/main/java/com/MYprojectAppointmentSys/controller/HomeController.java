@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class HomeController {
     @GetMapping
 public String HomeControllerHandler(){
-    return"User microservice for salon booking system";
+    return "User microservice for salon booking system";
 }
     
 }

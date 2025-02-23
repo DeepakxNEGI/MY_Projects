@@ -42,4 +42,6 @@ public class Salon {
 
     @Column(nullable = false)
     private LocalTime closeTime;
+
+  
 }

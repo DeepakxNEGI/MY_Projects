@@ -6,6 +6,7 @@ import java.util.List;
 import lombok.Data;
 @Data
 public class SalonDTO {
+    private Long id;
     private String name;
     private List<String> images;
     private String address;
@@ -15,4 +16,6 @@ public class SalonDTO {
     private Long ownerId;
     private LocalTime openTime;
     private LocalTime closeTime;
+    
+
 }
