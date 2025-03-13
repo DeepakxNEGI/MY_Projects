@@ -19,11 +19,11 @@ public class Booking {
     private Long id;
     private Long salonId;
     private Long customerId;
-    private LocalDateTime starTime;
+    private LocalDateTime startTime;
     private LocalDateTime endTime;
     @ElementCollection
     private Set<Long> serviceIds;
     private BookingStatus status=BookingStatus.PENDING;
-    private int totalServices;
+    private int totalPrice;
     
 }
