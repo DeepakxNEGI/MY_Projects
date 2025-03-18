@@ -1,6 +1,5 @@
 package com.MYprojectPaymentservice.service.impl;
 
-import org.apache.catalina.valves.JsonAccessLogValve;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -15,7 +14,10 @@ import com.MYprojectPaymentservice.service.PaymentService;
 import com.razorpay.PaymentLink;
 import com.razorpay.RazorpayClient;
 import com.razorpay.RazorpayException;
-
+import com.stripe.Stripe;
+import com.stripe.exception.StripeException;
+import com.stripe.model.checkout.Session;
+import com.stripe.param.checkout.SessionCreateParams;
 import lombok.RequiredArgsConstructor;
 
 @Service
@@ -34,7 +36,7 @@ public class PaymentServiceImpl implements PaymentService {
     @Override
     public PaymentLinkResponse createOrder(UserDTO user,
             BookingDTO booking,
-            PaymentMethod paymentMethod) throws RazorpayException {
+            PaymentMethod paymentMethod) throws RazorpayException, StripeException {
         Long amount = (long) booking.getTotalPrice();
         PaymentOrder order = new PaymentOrder();
         order.setAmount(amount);
@@ -109,9 +111,31 @@ public class PaymentServiceImpl implements PaymentService {
     }
 
     @Override
-    public String createStripePaymentLink(UserDTO user, Long amount, Long orderId) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'createStripePaymentLink'");
+    public String createStripePaymentLink(UserDTO user, Long amount, Long orderId) throws StripeException {
+  
+     Stripe.apiKey=stripeSecretkey;
+ SessionCreateParams params=SessionCreateParams.builder()
+   .addPaymentMethodType(SessionCreateParams.PaymentMethodType.CARD)
+     .setMode(SessionCreateParams.Mode.PAYMENT)
+     .setSuccessUrl("http://localhost:3000/payment-success/"+orderId)
+     .setCancelUrl("http://localhost:3000/payment/cancel")
+     .addLineItem( SessionCreateParams.LineItem.builder().setQuantity(1L)
+     .setPriceData(SessionCreateParams.LineItem.PriceData.builder()
+     .setCurrency("usd")
+     .setUnitAmount(amount*100)
+     .setProductData(SessionCreateParams
+     .LineItem
+     .PriceData
+     .ProductData
+     .builder()
+     .setName("Salon appointment booking")
+     .build())
+     .build())
+     .build())
+     .build();
+  
+     Session session =Session.create(params);
+     return session.getUrl();
     }
 
 }
