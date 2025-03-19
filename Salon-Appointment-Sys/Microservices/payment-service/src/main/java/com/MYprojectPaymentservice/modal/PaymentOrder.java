@@ -20,8 +20,8 @@ public class PaymentOrder {
     private Long amount;
     @Column(nullable = false)
     private PaymentOrderStatus status = PaymentOrderStatus.PENDING;
-    @Column(nullable = false)
-    private PaymentMethod paymentMethod;
+    // @Column(nullable = false)
+    // private PaymentMethod paymentMethod;
     @Column(nullable = false)
     private String paymentLinkId;
     @Column(nullable = false)
@@ -30,5 +30,8 @@ public class PaymentOrder {
     private Long bookingId;
     @Column(nullable = false)
     private long salonId;
+    @Column(nullable = false)
+    private com.stripe.model.PaymentMethod paymentMethod;
+
 
 }

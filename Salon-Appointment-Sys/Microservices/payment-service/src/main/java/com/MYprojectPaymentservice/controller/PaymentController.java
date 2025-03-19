@@ -1,12 +1,16 @@
 package com.MYprojectPaymentservice.controller;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.MYprojectPaymentservice.modal.PaymentOrder;
 import com.MYprojectPaymentservice.payload.dto.BookingDTO;
 import com.MYprojectPaymentservice.payload.dto.UserDTO;
 import com.MYprojectPaymentservice.payload.response.PaymentLinkResponse;
@@ -32,7 +36,33 @@ public class PaymentController {
         user.setFullname("Rahul");
         user.setEmail("QGgT4@example.com");
         user.setId(null);
-PaymentLinkResponse res = paymentService.createOrder(user, bookingDTO,null);
+PaymentLinkResponse res = paymentService.createOrder(user, bookingDTO, paymentMethod);
+
+return ResponseEntity.ok(res);
+    }
+
+
+
+    @GetMapping("/{paymenOrderId}")
+    public ResponseEntity<PaymentOrder> getPaymentOrderById(
+            @PathVariable Long paymenOrderId)
+            throws Exception {
+
+        PaymentOrder res = paymentService.getPaymentOrderById(paymenOrderId);
+
+return ResponseEntity.ok(res);
+    }
+
+
+    @PatchMapping("/proceed")
+    public ResponseEntity<Boolean> proceedPayment(
+    @RequestParam String paymentId,
+    @RequestParam String paymentLinkId)
+    throws Exception {
+        PaymentOrder paymentOrder = paymentService.getPaymentOrderByPaymentId(  paymentLinkId);
+
+
+        Boolean res = paymentService.proceedPayment(paymentOrder, paymentId, paymentLinkId);
 
 return ResponseEntity.ok(res);
     }

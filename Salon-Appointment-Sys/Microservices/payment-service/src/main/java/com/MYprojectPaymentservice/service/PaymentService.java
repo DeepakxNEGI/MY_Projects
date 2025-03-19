@@ -1,7 +1,6 @@
 
 package com.MYprojectPaymentservice.service;
 
-import com.MYprojectPaymentservice.domain.PaymentMethod;
 import com.MYprojectPaymentservice.modal.PaymentOrder;
 import com.MYprojectPaymentservice.payload.dto.BookingDTO;
 import com.MYprojectPaymentservice.payload.dto.UserDTO;
@@ -14,7 +13,7 @@ public interface PaymentService {
 
     PaymentLinkResponse createOrder(UserDTO user,
                                     BookingDTO booking,
-                                    PaymentMethod paymentMethod) throws RazorpayException, StripeException;
+                                    com.stripe.model.PaymentMethod paymentMethod) throws RazorpayException, StripeException;
     PaymentOrder getPaymentOrderById(Long id) throws Exception;
 
     PaymentOrder getPaymentOrderByPaymentId(String paymentId);
@@ -24,6 +23,7 @@ public interface PaymentService {
                                     Long orderId) throws RazorpayException;
     String createStripePaymentLink(UserDTO user,
                                     Long amount,
-                                    Long orderId) throws StripeException;                                
+                                    Long orderId) throws StripeException;
 
+    Boolean proceedPayment(PaymentOrder paymentOrder,String paymentId,String paymentLinkId) throws RazorpayException;
                                 }

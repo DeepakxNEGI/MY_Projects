@@ -5,12 +5,14 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import com.MYprojectPaymentservice.domain.PaymentMethod;
+import com.MYprojectPaymentservice.domain.PaymentOrderStatus;
 import com.MYprojectPaymentservice.modal.PaymentOrder;
 import com.MYprojectPaymentservice.payload.dto.BookingDTO;
 import com.MYprojectPaymentservice.payload.dto.UserDTO;
 import com.MYprojectPaymentservice.payload.response.PaymentLinkResponse;
 import com.MYprojectPaymentservice.repo.PaymentOrderRepository;
 import com.MYprojectPaymentservice.service.PaymentService;
+import com.razorpay.Payment;
 import com.razorpay.PaymentLink;
 import com.razorpay.RazorpayClient;
 import com.razorpay.RazorpayException;
@@ -36,7 +38,7 @@ public class PaymentServiceImpl implements PaymentService {
     @Override
     public PaymentLinkResponse createOrder(UserDTO user,
             BookingDTO booking,
-            PaymentMethod paymentMethod) throws RazorpayException, StripeException {
+            com.stripe.model.PaymentMethod paymentMethod) throws RazorpayException, StripeException {
         Long amount = (long) booking.getTotalPrice();
         PaymentOrder order = new PaymentOrder();
         order.setAmount(amount);
@@ -64,7 +66,7 @@ public class PaymentServiceImpl implements PaymentService {
         return paymentLinkResponse;
 
     }
-
+////////////
     @Override
     public PaymentOrder getPaymentOrderById(Long id) throws Exception {
         PaymentOrder paymentOrder = paymentOrderRepository.findById(id).orElse(null);
@@ -138,4 +140,28 @@ public class PaymentServiceImpl implements PaymentService {
      return session.getUrl();
     }
 
+ 
+
+    @Override
+    public Boolean proceedPayment(PaymentOrder paymentOrder, String paymentId, String paymentLinkId) throws RazorpayException {
+  if(paymentOrder.getStatus().equals(PaymentOrderStatus.PENDING)){
+    RazorpayClient razorpay=new RazorpayClient(razorpayApiKey,razorpayApiSecret);
+    
+    Payment payment =razorpay.payments.fetch(paymentId);
+    Integer amount = payment.get("amount");
+    String status = payment.get("status");
+
+    if(status.equals("captured")){
+
+      paymentOrder.setStatus(PaymentOrderStatus.SUCCESS);
+      paymentOrderRepository.save(paymentOrder);
+      return true;
+    }
+    return false;
+  }else{
+    paymentOrder.setStatus(PaymentOrderStatus.SUCCESS);
+      paymentOrderRepository.save(paymentOrder);
+    return true;
+    }
+}
 }
